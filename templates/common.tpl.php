@@ -14,8 +14,8 @@ function drawHead() { ?>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     </head>
     <body>
-    <wrapper><?php
-}
+    <wrapper>
+<?php }
 
 function drawNavBar() { ?>
     <section id="nav">
