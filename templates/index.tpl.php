@@ -35,50 +35,59 @@ function drawMain() { ?>
 
 function drawVehicles(array $vehicles) { ?>
 
-    <section id="vehicles">
-    <div class="vehicles-info">
-            <table class="vehicles-table" id="vehicles-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Picture</th>
-                        <th>Model</th>
-                        <th>Mark</th>
-                        <th>Year</th>
-                        <th>Transmission</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($vehicles as $vehicle) {
-                         $vehicle_id = $vehicle->id;
-                         $name = $vehicle->name;
-                         $picture = $vehicle->picture;
-                         $model = $vehicle->model;
-                         $mark = $vehicle->mark;
-                         $year = $vehicle->year;
-                         $transmission = $vehicle->transmission;
-                        ?>
-                        <tr>
-                            <td><?= $name ?></td>
-                            <td><img src="<?= $picture ?>" alt="Vehicle Picture"></td>
-                            <td><?= $model ?></td>
-                            <td><?= $mark ?></td>
-                            <td><?= $year ?></td>
-                            <td><?= $transmission ?></td>
-                            <td>
-                            <form class="view-vehicle-form" method="get">
-                                <input type="hidden" name="id" value="<?= $vehicle_id ?>">
-                                <button type="submit">View vehicle</button>
-                                <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
-                            </form>
-                            </td>
-                        </tr>
-                    <?php } ?>  
-                </tbody>
+<section id="vehicles">
+    <div class="vehicles-header">
+        <h3>Vehicle Models</h3>
+        <h2>Our rental fleet</h2>
+        <h4>Choose from a variety of our high-end sports cars for your next adventure</h4>
+    </div>
+        <div class="vehicles-left">
+            <table class="vehicle-name-table">
+                <?php foreach ($vehicles as $vehicle) {
+                    $name = $vehicle->name;
+                    $picture = $vehicle->picture;
+                    $model = $vehicle->model;
+                    $mark = $vehicle->mark;
+                    $year = $vehicle->year;
+                    $transmission = $vehicle->transmission;
+                ?>
+                <tr onclick="selectTd(this)">
+                    <td >
+                        <a href="javascript:void(0);" onclick="showVehicleDetails('<?= $name ?>', '<?= $picture ?>', '<?= $model ?>', '<?= $mark ?>', '<?= $year ?>', '<?= $transmission ?>')">
+                            <?= $name ?>
+                        </a>
+                    </td>
+                </tr>
+                <?php } ?>
             </table>
         </div>
-    </section>
+
+        <div class="vehicle-picture">
+        </div>
+
+        <div class="vehicle-details">      
+            <table class="vehicle-details-table">
+                <tr>
+                    <th>Model:</th>
+                    <td id="vehicle-model"><?= $vehicles[0]->model ?></td>
+                </tr>
+                <tr>
+                    <th>Mark:</th>
+                    <td id="vehicle-mark"><?= $vehicles[0]->mark ?></td>
+                </tr>
+                <tr>
+                    <th>Year:</th>
+                    <td id="vehicle-year"><?= $vehicles[0]->year ?></td>
+                </tr>
+                <tr>
+                    <th>Transmission:</th>
+                    <td id="vehicle-transmission"><?= $vehicles[0]->transmission ?></td>
+                </tr>
+            </table>
+        </div>
+</section>
+
+
+
 
 <?php }
-
-

@@ -12,6 +12,7 @@ function drawHead() { ?>
         <title>RentDrive</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <script src="../js/script.js"></script>
     </head>
     <body>
     <wrapper>
