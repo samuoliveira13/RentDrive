@@ -33,4 +33,52 @@ function drawMain() { ?>
     
 <?php }
 
+function drawVehicles(array $vehicles) { ?>
+
+    <section id="vehicles">
+    <div class="vehicles-info">
+            <table class="vehicles-table" id="vehicles-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Picture</th>
+                        <th>Model</th>
+                        <th>Mark</th>
+                        <th>Year</th>
+                        <th>Transmission</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($vehicles as $vehicle) {
+                         $vehicle_id = $vehicle->id;
+                         $name = $vehicle->name;
+                         $picture = $vehicle->picture;
+                         $model = $vehicle->model;
+                         $mark = $vehicle->mark;
+                         $year = $vehicle->year;
+                         $transmission = $vehicle->transmission;
+                        ?>
+                        <tr>
+                            <td><?= $name ?></td>
+                            <td><img src="<?= $picture ?>" alt="Vehicle Picture"></td>
+                            <td><?= $model ?></td>
+                            <td><?= $mark ?></td>
+                            <td><?= $year ?></td>
+                            <td><?= $transmission ?></td>
+                            <td>
+                            <form class="view-vehicle-form" method="get">
+                                <input type="hidden" name="id" value="<?= $vehicle_id ?>">
+                                <button type="submit">View vehicle</button>
+                                <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
+                            </form>
+                            </td>
+                        </tr>
+                    <?php } ?>  
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+<?php }
+
 
