@@ -130,7 +130,7 @@ function drawLocations(PDO $db) {
     </section>
 <?php }
 
-function drawContact() { ?>
+function drawContact(PDO $db) { ?>
 
     <section id="contact">
         <div class="contact-header">
@@ -163,19 +163,34 @@ function drawContact() { ?>
 
             <div class="contact-form">
                 <form action="">
-                    <label>
-                        <input type="text" name="fname" placeholder="First Name">
-                    </label>
-                    <label>
-                        <input type="text" name="lname" placeholder="Last Name">
-                    </label>
-                    <label>
+                    <div class="form-names">
+                        <label class="name">
+                            <input type="text" name="fname" placeholder="First Name">
+                        </label>
+                        <label class="name">
+                            <input type="text" name="lname" placeholder="Last Name">
+                        </label>
+                    </div>
+                    <label class="email">
                         <input type="email" name="email" placeholder="Email">
                     </label>
-                    <label>
+                    <label class="textarea">
                         <textarea name="text" placeholder="Message..."></textarea>
                     </label>
-                    <input type="submit" value="Submit">
+                    <div class="form-location">
+                        <label class="contact-form-subtitle" for="location">Location:</label><br>
+                        <?php
+                            $locations = Location::getLocations($db);
+                            foreach ($locations as $location) {
+                                $id = $location->id;
+                                $country = $location->country;
+                                ?>
+                                <input type="radio" id="location-<?= $id ?>" name="location" value="<?= $id ?>">
+                                <label for="location-<?= $id ?>"><?= $country ?></label>
+                        <?php } ?>
+                    </div>
+                    <br>
+                    <input class="contact-form-btn" type="submit" value="Submit">
                 </form>
             </div>
         </div>

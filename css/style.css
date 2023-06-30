@@ -320,12 +320,12 @@ button {
 
 #contact {
     width: 70%;
-    height: 50vh;
+    height: 70vh;
     margin: auto;
 }
 
 .contact-content {
-    height: 100%;
+    height: 70%;
     display: flex;
     justify-content: space-between;
 }
@@ -367,4 +367,66 @@ button {
 .contact-info-sm {
     display: flex;
     justify-content: space-around;
+}
+
+.contact-form {
+    width: 42em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.contact-form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-form .form-names {
+    display: flex;
+    justify-content: space-between;
+    width: 42em;
+}
+
+.contact-form .name input{
+    width: 20.2rem;
+    padding: 0.3em;
+    border: none;
+    border-bottom: 1px solid #2B7A78;
+}
+
+.contact-form .email input {
+    width: 41.2rem;
+    padding: 0.3em;
+    border: none;
+    border-bottom: 1px solid #2B7A78;
+}
+
+.contact-form textarea {
+    width: 41.4rem;
+    height: 8em;
+    padding: 0.3em;
+    border: none;
+    border-bottom: 1px solid #2B7A78;
+    resize: none;
+}
+
+.contact-form .contact-form-subtitle {
+    font-weight: 500;
+}
+
+.contact-form .contact-form-btn {
+    padding: 0.5em;
+    width: 12em;
+    height: 3em;
+    border: none;
+    border-radius: 8px;
+    background-color: #3AAFA9;
+    font-weight: 600;
+    font-size: 1em;
+    float: right;
+    align-self: flex-end;
+    margin-bottom: 0;
 }
