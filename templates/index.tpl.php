@@ -108,26 +108,32 @@ function drawVehicles(PDO $db, array $vehicles) {?>
 function drawLocations(PDO $db) { 
     $locations = Location::getLocations($db);
     ?>
-    
-    <div class="locations-header">
-        <h2>Our Locations</h2>
-        <h4>We are based in multiple countries around the world</h4>
-    </div>
+    <section id="locations">
 
-    <div class="locations-details">
-        <?php foreach ($locations as $location) { ?>
-            <div class="location-item" data-coordinates="<?= $location->coordinates ?>">
-                <p><?= $location->street ?><br><?= $location->city ?>, <?= $location->country ?></p>
+        <div class="locations-header">
+            <h2>Our Locations</h2>
+            <h4>We are based in multiple countries around the world</h4>
+        </div>
+
+        <div class="locations-details">
+            <div class="locations-details-">
+            <?php foreach ($locations as $location) { ?> 
+                <div class="location-item" data-coordinates="<?= $location->coordinates ?>">
+                    <p class="location-street"><?= $location->street ?></p>
+                    <p><?= $location->city ?>, <?= $location->country ?></p>
+                </div>
+            <?php } ?>
             </div>
-        <?php } ?>
-    </div>
-    <div id="location-map"></div>
-
+            <div id="location-map"></div>
+        </div>
+        
+    </section>
 <?php }
 
 function drawFooter() { ?>
     <script>
         function initMap() {
+            
             var coordinates = '41.149307, -8.610898';
             var [latitude, longitude] = coordinates.split(', ');
             var options = {
