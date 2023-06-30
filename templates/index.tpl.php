@@ -133,11 +133,46 @@ function drawLocations(PDO $db) {
 function drawContact() { ?>
 
     <section id="contact">
-        <div class="contect-header">
+        <div class="contact-header">
             <h2>Contact Us</h2>
             <h4>We are available 24/7 to answer all of your questions!</h4>
         </div>
-        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-info-header">
+                    <h2>Contact Information</h2>
+                    <p>Fill up the form and our team will get back to you as soon as possible</p>
+                </div>
+                <div class="contact-info-details">
+                    <div class="info-details-phone">
+                        <i class="fa fa-phone"></i>
+                        <p>+0123 4567 8910</p>
+                    </div>
+                    <div class="info-details-email">
+                        <i class="fa fa-envelope"></i>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="">
+                    <label>
+                        <input type="text" name="fname" placeholder="First Name">
+                    </label>
+                    <label>
+                        <input type="text" name="lname" placeholder="Last Name">
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="Email">
+                    </label>
+                    <label>
+                        <textarea name="text" placeholder="Message..."></textarea>
+                    </label>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </section>
 
 <?php }
