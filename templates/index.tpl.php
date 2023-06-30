@@ -144,14 +144,20 @@ function drawContact() { ?>
                     <p>Fill up the form and our team will get back to you as soon as possible</p>
                 </div>
                 <div class="contact-info-details">
-                    <div class="info-details-phone">
+                    <div class="info-details">
                         <i class="fa fa-phone"></i>
                         <p>+0123 4567 8910</p>
                     </div>
-                    <div class="info-details-email">
+                    <div class="info-details">
                         <i class="fa fa-envelope"></i>
                         <p>example@example.com</p>
                     </div>
+                </div>
+                <div class="contact-info-sm">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class='fa fa-facebook'></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </div>
             </div>
 

@@ -317,3 +317,54 @@ button {
 .location-item .location-street {
     font-weight: 600;
 }
+
+#contact {
+    width: 70%;
+    height: 50vh;
+    margin: auto;
+}
+
+.contact-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 16em;
+    background-color: #3AAFA9;
+    padding: 2em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-info * {
+    color: #FEFFFF;
+}
+
+#contact h2 {
+    font-size: 1.3em;
+}
+
+.contact-info-header p {
+    font-size: 0.9em;
+}
+
+.contact-info-details {
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.contact-info-sm {
+    display: flex;
+    justify-content: space-around;
+}
