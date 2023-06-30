@@ -130,6 +130,18 @@ function drawLocations(PDO $db) {
     </section>
 <?php }
 
+function drawContact() { ?>
+
+    <section id="contact">
+        <div class="contect-header">
+            <h2>Contact Us</h2>
+            <h4>We are available 24/7 to answer all of your questions!</h4>
+        </div>
+        
+    </section>
+
+<?php }
+
 function drawFooter() { ?>
     <script>
         function initMap() {
