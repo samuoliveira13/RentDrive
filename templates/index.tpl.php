@@ -115,13 +115,38 @@ function drawLocations(PDO $db) {
     </div>
 
     <div class="locations-details">
-        <div class="locations-details-name">
-            <?php foreach ($locations as $location) { ?>
-                <p><?= $location->street ?><br><?= $location->city?>, <?= $location->country ?></p>
-            <?php } ?>
-        </div>
-        <div class="locations-details-map"></div>
+        <?php foreach ($locations as $location) { ?>
+            <div class="location-item" data-coordinates="<?= $location->coordinates ?>">
+                <p><?= $location->street ?><br><?= $location->city ?>, <?= $location->country ?></p>
+            </div>
+        <?php } ?>
     </div>
+    <div id="location-map"></div>
 
+<?php }
 
+function drawFooter() { ?>
+    <script>
+        function initMap() {
+            var coordinates = '41.149307, -8.610898';
+            var [latitude, longitude] = coordinates.split(', ');
+            var options = {
+                zoom:15,
+                center: { lat: parseFloat(latitude), lng: parseFloat(longitude) }
+            }
+
+            var map = new google.maps.Map(document.getElementById('location-map'), options);
+
+            var marker = new google.maps.Marker({
+                position:{lat: parseFloat(latitude), lng: parseFloat(longitude)},
+                map: map,
+                icon: {
+                    url: '../assets/marker.svg',
+                    scaledSize: new google.maps.Size(60,48)
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARSxj6TefLNmauzYyZ8FsdAudEQpDK6bw&callback=initMap" async defer></script>
+    </body>
 <?php }

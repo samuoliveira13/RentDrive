@@ -17,6 +17,7 @@ drawNavBar();
 drawMain($db);
 drawVehicles($db, $vehicles);
 drawLocations($db);
+drawFooter();
 
 
 ?>

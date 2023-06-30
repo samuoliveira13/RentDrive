@@ -282,3 +282,8 @@ button {
     justify-content: center;
     text-align: center;
 }
+
+#location-map {
+    height: 400px;
+    width: 300px;
+}
