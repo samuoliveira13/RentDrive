@@ -105,10 +105,22 @@ function drawVehicles(PDO $db, array $vehicles) {?>
     
     <?php }
     
-function drawLocations(PDO $db, array $locations) { ?>
+function drawLocations(PDO $db) { 
+    $locations = Location::getLocations($db);
+    ?>
+    
     <div class="locations-header">
         <h2>Our Locations</h2>
         <h4>We are based in multiple countries around the world</h4>
+    </div>
+
+    <div class="locations-details">
+        <div class="locations-details-name">
+            <?php foreach ($locations as $location) { ?>
+                <p><?= $location->street ?><br><?= $location->city?>, <?= $location->country ?></p>
+            <?php } ?>
+        </div>
+        <div class="locations-details-map"></div>
     </div>
 
 

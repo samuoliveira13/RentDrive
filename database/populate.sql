@@ -11,8 +11,8 @@ INSERT INTO vehicles (name, picture, model, mark, year, transmission, location_i
 VALUES ('Renault Clio', '../assets/clio_reserva.png', 'Clio', 'Renault', '2016', 'Manual', 2);
 
 
-INSERT INTO locations (street, country)
-VALUES ('123 Main Street', 'United States');
+INSERT INTO locations (street, city, country, coordinates)
+VALUES ('123 Main Street', 'New York', 'United States', '41.032232, -73.768920');
 
-INSERT INTO locations (street, country)
-VALUES ('Avenida dos Aliados', 'Portugal');
+INSERT INTO locations (street, city, country, coordinates)
+VALUES ('Avenida dos Aliados', 'Porto', 'Portugal', '41.149307, -8.610898');

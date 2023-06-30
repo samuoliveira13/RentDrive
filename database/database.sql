@@ -13,5 +13,7 @@ CREATE TABLE vehicles (
 CREATE TABLE locations (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     street TEXT NOT NULL,
-    country TEXT NOT NULL
+    city TEXT NOT NULL,
+    country TEXT NOT NULL,
+    coordinates TEXT NOT NULL
 );
