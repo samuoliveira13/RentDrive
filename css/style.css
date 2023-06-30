@@ -65,6 +65,7 @@ button {
 .main-upper-left {
     width: inherit;
     z-index: 2;
+    margin-bottom: 2em;
 }
 
 .main-upper-left h1 {
@@ -93,7 +94,7 @@ button {
     position: absolute;
     z-index: 0;
     top: 7em;
-    right: 10em;
+    right: 12em;
     object-fit:contain;
     width: 45em;
     height: auto;
@@ -208,7 +209,7 @@ button {
 }
 
 .vehicle-details-table td {
-    width: 8em;
+    width: 10em;
     height: 1em;
     padding: 1em;
     background-color: #DEF2F1;

@@ -11,25 +11,22 @@
         public string $mark;
         public string $year;
         public string $transmission;
+        public int $location_id;
 
-        public function __construct(int $id, string $name, string $picture, string $model, string $mark, string $year, $transmission) {
+        public function __construct($id, string $name, string $picture, string $model, string $mark, string $year, string $transmission,  $location_id) {
 
-            $this->id = $id;
+            $this->id = intval($id);
             $this->name = $name;
             $this->picture = $picture;
             $this->model = $model;
             $this->mark = $mark;
             $this->year = $year;
             $this->transmission = $transmission;
-        }
-
-        public function getName() : string {
-            $names = explode(" ", $this->name);
-            return count($names) > 1 ? $names[0]. " " . $names[count($names)-1] : $names[0];
+            $this->location_id = intval($location_id);
         }
 
         static function getVehicles(PDO $db) : array {
-            $stmt = $db->prepare('SELECT id, name, picture, model, mark, year, transmission FROM vehicles');
+            $stmt = $db->prepare('SELECT id, name, picture, model, mark, year, transmission, location_id FROM vehicles');
             $stmt->execute();
 
             $vehicles = array();
@@ -42,13 +39,14 @@
                     $vehicle['mark'],
                     $vehicle['year'],
                     $vehicle['transmission'],
+                    $vehicle['location_id'],
                 );
             }
             return $vehicles;
         }
 
         static function getvehicle(PDO $db, int $id) : vehicle {
-            $stmt = $db->prepare('SELECT id, name, picture, model, mark, year, transmission FROM vehicles WHERE id = ?');
+            $stmt = $db->prepare('SELECT id, name, picture, model, mark, year, transmission, location_id FROM vehicles WHERE id = ?');
             $stmt->execute(array($id));
 
             $vehicle = $stmt->fetch();
@@ -61,6 +59,7 @@
                 $vehicle['mark'],
                 $vehicle['year'],
                 $vehicle['transmission'],     
+                $vehicle['location_id'],     
             );
         }
         

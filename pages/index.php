@@ -13,7 +13,7 @@ $vehicles = Vehicle::getVehicles($db);
 drawHead();
 drawNavBar();
 drawMain();
-drawVehicles($vehicles);
+drawVehicles($db, $vehicles);
 
 
 ?>

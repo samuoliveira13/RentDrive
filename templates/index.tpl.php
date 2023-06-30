@@ -33,7 +33,7 @@ function drawMain() { ?>
     
 <?php }
 
-function drawVehicles(array $vehicles) { ?>
+function drawVehicles(PDO $db, array $vehicles) {?>
 
 <section id="vehicles">
     <div class="vehicles-header">
@@ -50,10 +50,11 @@ function drawVehicles(array $vehicles) { ?>
                     $mark = $vehicle->mark;
                     $year = $vehicle->year;
                     $transmission = $vehicle->transmission;
+                    $location_id = $vehicle->location_id;
                 ?>
                 <tr onclick="selectTd(this)">
                     <td >
-                        <a href="javascript:void(0);" onclick="showVehicleDetails('<?= $name ?>', '<?= $picture ?>', '<?= $model ?>', '<?= $mark ?>', '<?= $year ?>', '<?= $transmission ?>')">
+                        <a href="javascript:void(0);" onclick="showVehicleDetails('<?= $name ?>', '<?= $picture ?>', '<?= $model ?>', '<?= $mark ?>', '<?= $year ?>', '<?= $transmission ?>', '<?= $location_id ?>')">
                             <?= $name ?>
                         </a>
                     </td>
@@ -86,7 +87,10 @@ function drawVehicles(array $vehicles) { ?>
             </table>
         </div>
 </section>
-
+    
+    <?php }
+    
+function drawLocations(PDO $db, array $vehicles) { ?>
 
 
 

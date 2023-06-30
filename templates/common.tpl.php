@@ -24,7 +24,7 @@ function drawNavBar() { ?>
         <div class="nav-menu">
             <ul>
                 <li><a href="../pages/index.php">HOME</a></li>
-                <li><a href="../pages/about.php">ABOUT</a></li>
+                <li><a href="../pages/about.php">DEALERS</a></li>
                 <li><a href="../pages/contact.php">CONTACT US</a></li>
             </ul>
         </div>

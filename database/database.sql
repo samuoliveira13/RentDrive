@@ -5,5 +5,13 @@ CREATE TABLE vehicles (
     model TEXT NOT NULL,
     mark TEXT NOT NULL,
     year TEXT NOT NULL,
-    transmission TEXT NOT NULL
-)
+    transmission TEXT NOT NULL,
+    location_id INTEGER,
+    FOREIGN KEY (location_id) REFERENCES locations(id)
+);
+
+CREATE TABLE locations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    street TEXT NOT NULL,
+    country TEXT NOT NULL
+);
