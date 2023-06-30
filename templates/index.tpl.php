@@ -52,7 +52,7 @@ function drawVehicles(PDO $db, array $vehicles) {?>
                     $transmission = $vehicle->transmission;
                     $location_id = $vehicle->location_id;
                 ?>
-                <tr onclick="selectTd(this)">
+                <tr <?php if ($firstVehicle) { echo 'class="selected"'; $firstVehicle = false; } ?> onclick="selectTd(this)">
                     <td >
                         <a href="javascript:void(0);" onclick="showVehicleDetails('<?= $name ?>', '<?= $picture ?>', '<?= $model ?>', '<?= $mark ?>', '<?= $year ?>', '<?= $transmission ?>', '<?= $location_id ?>')">
                             <?= $name ?>

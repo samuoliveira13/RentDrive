@@ -200,6 +200,7 @@ button {
     background-color: #DEF2F1;
     font-weight: 500;
     border-radius: 10px;
+    cursor: pointer;
 }
 .vehicle-name-table td:hover {
     background-color: #2B7A78;
