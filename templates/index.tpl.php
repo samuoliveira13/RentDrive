@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-function drawMain() { ?>
+function drawMain(PDO $db) { ?>
     <section id="main">
         <div class="main-upper">
             <div class="main-upper-left">
@@ -14,8 +14,17 @@ function drawMain() { ?>
         <div class="main-form">
             <form action="">
                 <div class="input-box">
-                    <span>Location</span>
-                    <input type="search" name="location" placeholder="Search Places">
+                    <label for="location">Location:</label>
+                    <select name="location" id="location-select">
+                        <?php
+                        $locations = Location::getLocations($db);
+                        foreach ($locations as $location) {
+                        $id = $location->id;
+                        $country = $location->country;
+                        ?>
+                        <option value="<?= $id ?>"><?= $country ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
                 <div class="input-box">
                     <span>Pick-Up Date</span>

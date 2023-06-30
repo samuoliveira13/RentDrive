@@ -123,7 +123,7 @@ button {
     font-weight: 500;
 }
 
-.main-form .input-box input {
+.main-form .input-box input, .main-form .input-box select{
     padding: 0.5em;
     outline: none;
     border: none;

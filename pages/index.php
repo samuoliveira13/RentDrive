@@ -14,7 +14,7 @@ $locations = Location::getLocations($db);
 
 drawHead();
 drawNavBar();
-drawMain();
+drawMain($db);
 drawVehicles($db, $vehicles);
 drawLocations($db, $locations);
 
