@@ -16,6 +16,7 @@ function drawMain(PDO $db) { ?>
                 <div class="input-box">
                     <label for="location">Location:</label>
                     <select name="location" id="location-select">
+                        <option value="" disabled selected>Choose Location</option>
                         <?php
                         $locations = Location::getLocations($db);
                         foreach ($locations as $location) {
@@ -95,8 +96,8 @@ function drawVehicles(PDO $db, array $vehicles) {?>
                     </tr>
                 </table>
 
-                <div class="button-container">
-                    <a href="newpage.php?id=<?= $vehicles[0]->id ?>" class="button">Book Now</a>
+                <div class="button-container" onclick="redirectToPage(<?= $vehicles[0]->id ?>)">
+                    <a href="../pages/book_vehicle.php?id=<?= $vehicles[0]->id ?>" class="button">Book Now</a>
                 </div>
             </div>
 

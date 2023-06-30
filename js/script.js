@@ -40,3 +40,7 @@ window.onload = function() {
   
   let selectedTd = null;
   
+
+  function redirectToPage(id) {
+    window.location.href = "../pages/book_vehicle.php?id=" + id;
+}

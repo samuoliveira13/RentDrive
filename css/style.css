@@ -232,6 +232,27 @@ button {
     text-align: left;
 }
 
+.button-container {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: #2B7A78;
+    padding: 0.8em 0;
+    border-radius: 5px;
+}
+
+.button-container:hover {
+    background-color: #3AAFA9;
+}
+.button-container:hover a {
+    color: #17252A;
+}
+
+.button-container a {
+    color: #FEFFFF;
+    font-weight: 600;
+}
+
 .vehicle-picture {
     grid-column: 2;
     display: flex;
