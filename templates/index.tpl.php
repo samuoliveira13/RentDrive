@@ -90,8 +90,11 @@ function drawVehicles(PDO $db, array $vehicles) {?>
     
     <?php }
     
-function drawLocations(PDO $db, array $vehicles) { ?>
-
+function drawLocations(PDO $db, array $locations) { ?>
+    <div class="locations-header">
+        <h2>Our Locations</h2>
+        <h4>We are based in multiple countries of the world</h4>
+    </div>
 
 
 <?php }
