@@ -430,3 +430,47 @@ button {
     align-self: flex-end;
     margin-bottom: 0;
 }
+
+footer {
+    background-color: #3AAFA9;
+    text-align: center;
+    padding: 20px;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socials {
+    width: 8em;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    margin-bottom: 0.5em;
+}
+
+.footer-socials i{
+    font-size: 2em;
+}
+
+.footer-info {
+    font-weight: 500;
+    display: flex;
+    gap: 1em;
+}
+
+.footer-info a:hover {
+    color: #FEFFFF;
+}
+
+footer h4 {
+    margin: auto;
+    width: fit-content;
+    font-weight: 500;
+    color: #404040;
+}

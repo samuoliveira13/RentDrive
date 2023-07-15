@@ -18,6 +18,7 @@ drawMain($db);
 drawVehicles($db, $vehicles);
 drawLocations($db);
 drawContact($db);
+drawMap();
 drawFooter();
 
 

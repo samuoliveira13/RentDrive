@@ -32,4 +32,24 @@ function drawNavBar() { ?>
             </div>
         </div>
     </section>
+
+<?php }
+function drawFooter() { ?>
+    </wrapper>
+        <footer>
+            <section id="footer">
+                <div class="footer-socials">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </div>
+                <div class="footer-info">
+                    <a href="">Terms of Service</a>
+                    <a href="">Privacy Policiy</a>
+                </div>
+                <h4>&copy; 2018 Rent Drive</h4>
+            </section>
+        </footer>
+    </body>
+    
 <?php }

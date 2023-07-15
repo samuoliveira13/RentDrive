@@ -198,7 +198,7 @@ function drawContact(PDO $db) { ?>
 
 <?php }
 
-function drawFooter() { ?>
+function drawMap() { ?>
     <script>
         function initMap() {
             
