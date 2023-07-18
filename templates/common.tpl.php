@@ -19,7 +19,7 @@ function drawHead() { ?>
     <wrapper>
 <?php }
 
-function drawNavBar(User $user) { ?>
+function drawNavBar(?User $user) { ?>
     <section id="nav">
         <div class="nav-wrapper">
             <img class="nav-logo" src="../assets/logo1.png" alt="RentDrive">
@@ -31,13 +31,13 @@ function drawNavBar(User $user) { ?>
                 </ul>
                 <?php if ($user === null) { ?>
                     <div class="nav-log-reg">
-                        <a href="">Register</a>
-                        <a href="">Log In</a>
+                        <a href="../pages/register.php">Register</a>
+                        <a href="../pages/login.php">Log In</a>
                     </div>
                 <?php } else { ?>
                     <div class="nav-profile">
                         <img src="" alt="">
-                        <h5><?php echo $user->f_name . ' ' . $user->l_name; ?></h5>
+                        <h5><?php echo $user->f_name . ' | ' . $user->l_name; ?></h5>
                     </div>
                 <?php } ?>
             </div>

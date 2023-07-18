@@ -34,6 +34,13 @@ button {
     justify-content: space-between;
 }
 
+.nav-menu {
+    display: flex;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
 .nav-menu ul {
     display: flex;
     gap: 2em;
@@ -51,8 +58,21 @@ button {
     color: #3AAFA9;
 }
 
-.nav-menu a:visited {
-    color: #3AAFA9;
+.nav-log-reg {
+    width: 9em;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7em;
+    background-color: #2B7A78;
+    border-radius: 1em;
+}
+
+.nav-log-reg a {
+    color: #FEFFFF;
+}
+
+.nav-log-reg a:hover {
+    color: #17252A;
 }
 
 #main {

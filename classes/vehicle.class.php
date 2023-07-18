@@ -12,7 +12,7 @@
         public string $year;
         public string $transmission;
         public int $location_id;
-        public int $assigned_to;
+        public ?int $assigned_to;
         
 
         public function __construct($id, string $name, string $picture, string $model, string $mark, string $year, string $transmission,  $location_id, $assigned_to) {
