@@ -11,11 +11,13 @@ require_once('../classes/session.class.php');
 
 $session = new Session();
 $user = null;
+
+$db = getDatabaseConnection();
+
 if ($session->isLoggedIn()) {
     $user = User::getUser($db, $session->getId());
 }
 
-$db = getDatabaseConnection();
 $vehicles = Vehicle::getVehicles($db);
 $locations = Location::getLocations($db);
 

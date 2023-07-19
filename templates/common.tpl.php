@@ -62,5 +62,15 @@ function drawFooter() { ?>
             </section>
         </footer>
     </body>
-    
+<?php }
+
+function drawMessages(Session $session) { ?>
+    <section id="messages">
+        <?php foreach($session->getMessages() as $message) { ?>
+            <article clas="<?=$message['type']?>">
+            <i class="fas fa-exclamation-circle"></i>
+            <?=$message['text']?>
+            </article>
+        <?php } ?>
+    </section>
 <?php }
