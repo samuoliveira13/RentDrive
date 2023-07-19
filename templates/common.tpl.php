@@ -36,8 +36,7 @@ function drawNavBar(?User $user) { ?>
                     </div>
                 <?php } else { ?>
                     <div class="nav-profile">
-                        <img src="" alt="">
-                        <h5><?php echo $user->f_name . ' | ' . $user->l_name; ?></h5>
+                        <h5><?php echo ucfirst($user->f_name) . ' ' . ucfirst($user->l_name); ?></h5>
                     </div>
                 <?php } ?>
             </div>
