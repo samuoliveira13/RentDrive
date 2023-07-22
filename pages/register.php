@@ -11,6 +11,7 @@
     $_SESSION['input']['password register'] = $_SESSION['input']['password register'] ?? "";
     $_SESSION['input']['confirm_password register'] = $_SESSION['input']['confirm_password register'] ?? "";
 
+    drawHead();
     drawLogRegHeader();
     drawRegisterForm();
 ?>
