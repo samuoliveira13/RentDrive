@@ -27,7 +27,7 @@ function drawNavBar(?User $user) { ?>
                 <ul>
                     <li><a href="#main">HOME</a></li>
                     <li><a href="#locations">LOCATIONS</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
                 <?php if ($user === null) { ?>
                     <div class="nav-log-reg">
